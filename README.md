@@ -1,17 +1,33 @@
-Python-based Slicer from STL to PNG Images
-==========
+# Python-based Slicer from STL to PNG Images
 
-This code is in production and is not complete. While running, it produces png images from an STL file. There is currently no visualization or gui. All scaling and orientation settings must be completed beforehand. This code base is extended from a different [project](https://github.com/matthewelse/pySlice).
+## Introduction
+This project is a Python-based slicer that generates PNG images from STL files. Currently in production but not yet complete, the code does not include any visualization or graphical user interface (GUI). All scaling and orientation settings must be configured beforehand. This codebase is an extension of a different [project](https://github.com/matthewelse/pySlice), which was developed to automate the creation of schematics for LEGO sculptures based on 3D models.
 
+## Original Text by Matthew Else
+A 3D model slicing algorithm, written by Matthew Else in Python. The primary motivation for developing this algorithm was the need for a Python-based solution and the desire to avoid using alternatives licensed under AGPL, which require the release of source code for commercial use.
 
-### Original Text:
-A 3D model Slicing algorithm, written by Matthew Else in Python. Written, firstly because I need a nice algorithm in Python, and secondly because alternative solutions are all licensed under AGPL, and I need a solution for myself that can be used commercially without releasing source code for everything else.
+## Supported File Formats
+The code currently supports the following file format:
+- STL
 
-The code currently only supports the following file formats:
-* STL
+Future updates may include support for additional formats such as OBJ. However, for now, STL is sufficient. The current version cannot generate G-Code, but it can generate all layers through a simple for loop.
 
-I plan to possibly support other formats such as OBJ, for example however at the moment STL is fine. It currently cannot generate G-Code, and all it will take is a for loop to generate all of the layers.
+## Goals
+The goal of this project is to provide a tool for generating schematics for LEGO sculptures based on 3D models. By automating the process of creating PNG images from STL files, I aim to streamline the workflow for designing and building LEGO sculptures.
 
-If you test pySlice successfully or unsuccessfully, let me know in the issues section of Github.
+## Limitations
+Several limitations of this project should be noted:
 
-pySlice.py is licensed under the MIT license.
+1. **Visualization and GUI:** The code does not include any visualization or graphical user interface. All configurations must be done beforehand.
+2. **File Format Support:** Currently, only STL files are supported. Future updates may include additional formats.
+3. **G-Code Generation:** The code does not generate G-Code. This functionality may be added in future updates.
+
+## Usage
+To use this code, set the file paths and slicing heights in the parameterization section, and run the slicing algorithm. The PNG images will be saved in the specified output directory.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+I hope this project helps others in the future who are interested in generating PNG images from STL files for purposes such as creating schematics for LEGO sculptures.
